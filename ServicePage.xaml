@@ -37,7 +37,7 @@
             <RadioButton Content="По убыванию стоимости" GroupName="Sort" Width="300" FontSize="20" Checked="RButtonDown_Checked" Name="RButtonDown"></RadioButton>
         </StackPanel>
 
-            <ListView Name="ServiceListView" Grid.Row="2">
+        <ListView Name="ServiceListView" Grid.Row="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -70,7 +70,7 @@
                         <TextBlock Text="{Binding Title}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20"></TextBlock>
                         <TextBlock Text="{Binding Cost, StringFormat={}{0:0} рублей за}"     Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="20"></TextBlock>
                         <TextBlock Text="{Binding DurationInSeconds}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" FontSize="20"></TextBlock>
-                        <TextBlock Text="{Binding Discount, StringFormat=*скидка {0} % }" Opacity="{Binding Discount}" Margin="5" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16"></TextBlock>
+                        <TextBlock Text="{Binding DiscountInt, StringFormat=скидка {0} % }" Opacity="{Binding DiscountInt}" Margin="5" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16"></TextBlock>
 
                         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
                             <Button Name="EditButton" Content="Редактировать" Margin="2"></Button>
@@ -80,17 +80,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <!--<Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <StackPanel Margin="10" Orientation="Horizontal">
-                <TextBlock Text="Введите название для поиска " TextAlignment="Right" Width="300" FontSize="20"></TextBlock>
-                <TextBox Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged" Width="300" FontSize="15"></TextBox>
-            </StackPanel>
-        </WrapPanel>-->
     </Grid>
-    
 </Page>

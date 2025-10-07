@@ -42,23 +42,23 @@ namespace Akhmetshin_Autoservice
             }
             if (ComboType.SelectedIndex == 1)
             {
-                currentServices = currentServices.Where(p => p.Discount >= 0 && p.Discount <= 0.05).ToList();
+                currentServices = currentServices.Where(p => p.DiscountInt >= 0 && p.DiscountInt < 5).ToList();
             }
             if (ComboType.SelectedIndex == 2)
             {
-                currentServices = currentServices.Where(p => p.Discount >= 0.05 && p.Discount <= 0.15).ToList();
+                currentServices = currentServices.Where(p => p.DiscountInt >= 5 && p.DiscountInt < 15).ToList();
             }
             if (ComboType.SelectedIndex == 3)
             {
-                currentServices = currentServices.Where(p => p.Discount >= 0.15 && p.Discount <= 0.30).ToList();
+                currentServices = currentServices.Where(p => p.DiscountInt >= 15 && p.DiscountInt < 30).ToList();
             }
             if (ComboType.SelectedIndex == 4)
             {
-                currentServices = currentServices.Where(p => p.Discount >= 0.30 && p.Discount <= 0.70).ToList();
+                currentServices = currentServices.Where(p => p.DiscountInt >= 30 && p.DiscountInt < 70).ToList();
             }
             if (ComboType.SelectedIndex == 5)
             {
-                currentServices = currentServices.Where(p => p.Discount >= 0.70 && p.Discount <= 1).ToList();
+                currentServices = currentServices.Where(p => p.DiscountInt >= 70 && p.DiscountInt < 100).ToList();
             }
             currentServices = currentServices.Where(p => p.Title.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
 
